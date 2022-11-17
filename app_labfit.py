@@ -60,7 +60,6 @@ if nd != 0:
     xmax=xmax+dist*0.05
     xmin=xmin-dist*0.05
     xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
-    xx
     fig = plt.figure(figsize=(4, 4), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
     ax.set_facecolor('azure')
@@ -72,7 +71,3 @@ if nd != 0:
         ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k')
         st.pyplot(fig)
 
-#    for i in range(1,nd):
-#        dd = st.input_number
-#        xd.append()
-#st.write(df.head())
