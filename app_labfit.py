@@ -68,9 +68,9 @@ if nd != 0:
     if optfit == 'Lineal':
         coef = np.polyfit(xdata, ydata, 1)
         poly1d_fn = np.poly1d(coef) 
-        ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k')
-        fig.xlabel(labelx)
-        fig.ylabel(labely)
+        ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k').label(labelx)
+        #fig.xlabel(labelx)
+        #fig.ylabel(labely)
         st.pyplot(fig)
     #else:
 
