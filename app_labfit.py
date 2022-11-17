@@ -43,8 +43,8 @@ if nd != 0:
 
     with st.form('datos') as f:
         gb = GridOptionsBuilder.from_dataframe(df) 
-        gb.configure_column('X',type=["numericColumn","numberColumnFilter","customNumericFormat"], valueGetter='(Number(data.EMPLVL)).toFixed(1)')
-        gb.configure_column('Y',type=["numericColumn","numberColumnFilter","customNumericFormat"], precision=4)
+        gb.configure_column('X',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.X)).toFixed(2)')
+        gb.configure_column('Y',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.Y)).toFixed(2)') 
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         st.form_submit_button('Realizar ajuste')
