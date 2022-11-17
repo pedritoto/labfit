@@ -71,7 +71,7 @@ if nd != 0:
         poly1d_fn = np.poly1d(coef) 
         ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k')
         st.pyplot(fig)
-    else:
+    #else:
 
 
 
