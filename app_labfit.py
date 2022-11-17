@@ -48,6 +48,8 @@ if nd != 0:
      
     xdata = response['data']['X'].to_numpy()
     ydata = response['data']['Y'].to_numpy()
+    xdata
+    ydata
     st.write(ydata[1])
     fig = plt.figure(figsize=(4, 4), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
