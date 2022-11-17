@@ -73,7 +73,12 @@ if nd != 0:
         plt.xlabel(labelx)
         plt.ylabel(labely)
         st.pyplot(fig)
-    #else:
-
+    else:
+        # Function to calculate the power-law with constants a and b
+        def power_law(x, a, b):
+            return a*np.power(x, b)
+        # Fit the dummy power-law data
+        pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
+        st.write(pars)
 
 
