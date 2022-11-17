@@ -54,9 +54,9 @@ if nd != 0:
     for i in range (0,nd):
         xdata[i]=float(response['data']['X'][i])
         ydata[i]=float(response['data']['Y'][i])
-    maxx = np.max(xdata)
+    xmax = np.max(xdata)
     xmin = np.min(xdata)
-    xx=np.linspace(minx, maxx, num=40, endpoint=True, dtype=float)
+    xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
     xx
     fig = plt.figure(figsize=(4, 4), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
