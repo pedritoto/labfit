@@ -48,11 +48,19 @@ if nd != 0:
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         st.form_submit_button('Realizar ajuste')
-     
-    xd = response['data']['X']
-    yd = response['data']['Y']
-    xdata = np.array(map(float, xd))
-    ydata = np.array(map(float, yd))
+    xdata=[]
+    ydata=[]
+
+    for i in range (0,nd):
+        xdata.append(float(response['data']['X'][i]))
+        ydata.append(float(response['data']['Y'][i]))
+
+
+    #xd = response['data']['X']
+    #yd = response['data']['Y']
+
+    #xdata = np.array(map(float, xd))
+    #ydata = np.array(map(float, yd))
     #xdata = df['X'][1]
     #ydata = df['Y'][1]
     xdata
