@@ -57,16 +57,6 @@ if nd != 0:
         ydata[i]=float(response['data']['Y'][i])
         st.write(xdata[i],ydata[i])
 
-
-    #xd = response['data']['X']
-    #yd = response['data']['Y']
-
-    #xdata = np.array(map(float, xd))
-    #ydata = np.array(map(float, yd))
-    #xdata = df['X'][1]
-    #ydata = df['Y'][1]
-    #xdata
-    #ydata
     st.write(ydata[1])
     fig = plt.figure(figsize=(4, 4), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
@@ -75,9 +65,9 @@ if nd != 0:
     if optfit == 'Lineal':
 
         coef = np.polyfit(xdata, ydata, 1)
-        #poly1d_fn = np.poly1d(coef) 
-        #fig.plot(xdata, ydata, 'yo', xdata, a*xdata+b, '--k')
-        #st.pyplot(fig)
+        poly1d_fn = np.poly1d(coef) 
+        fig.plot(xdata, ydata, 'yo', xdata, a*xdata+b, '--k')
+        st.pyplot(fig)
 
 #    for i in range(1,nd):
 #        dd = st.input_number
