@@ -17,7 +17,11 @@ with st.sidebar:
     st.markdown(""" 
              ### *Autores:*
              **Dr. Juan Pedro Palomares Báez**
+
+
              **Dr. José Manuel Nápoles Duarte**
+
+             
              **MC. Carlos Armando de la Vega Cobos**
              
              """)
