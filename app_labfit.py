@@ -41,26 +41,11 @@ ydata=[]
 if nd != 0:
     df = pd.DataFrame("",index=range(nd),columns=list("XY"))
 
-    #gb = GridOptionsBuilder.from_dataframe(df)
-    #gb.configure_default_column(editable=True)
-
-    #gb.configure_grid_options(enableRangeSelection=True)
-
-
-    #response = AgGrid(
-    #    df,
-    #    gridOptions=gb.build(),
-    #    fit_columns_on_grid_load=True,
-    #    allow_unsafe_jscode=True,
-    #    enable_enterprise_modules=True
-    #)
     with st.form('datos') as f:
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         st.form_submit_button('Realizar ajuste')
-    
-
-    #st.write(response['data']) 
+     
     xdata = response['data']['X']
     ydata = response['data']['Y']
     st.write(ydata[1])
