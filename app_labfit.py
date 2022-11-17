@@ -80,7 +80,7 @@ if nd != 0:
         # Fit the dummy power-law data
         pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
         yy=power_law(xx,pars[0],pars[1])
-        ax.plot(xdata, ydata, 'rO', xx, yy, '--k')
+        ax.plot(xdata, ydata, 'r+', xx, yy, '--k')
         ax.grid()
         plt.xlabel(labelx)
         plt.ylabel(labely)
