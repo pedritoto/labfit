@@ -48,13 +48,14 @@ if nd != 0:
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         st.form_submit_button('Realizar ajuste')
-    xdata=[]
-    ydata=[]
+    xdata=np.empty(nd, dtype=float) 
+    ydata=np.empty(nd, dtype=float) 
 
     for i in range (0,nd):
-        st.write('---',float(response['data']['X'][i]),response['data']['Y'][i]) 
-        #xdata.append(float(response['data']['X'][i]))
-        #ydata.append(float(response['data']['Y'][i]))
+        #st.write('---',float(response['data']['X'][i]),response['data']['Y'][i]) 
+        xdata[i]=float(response['data']['X'][i])
+        ydata[i]=float(response['data']['Y'][i])
+        st.write(xdata[i],ydata[i])
 
 
     #xd = response['data']['X']
@@ -66,7 +67,7 @@ if nd != 0:
     #ydata = df['Y'][1]
     #xdata
     #ydata
-    st.write(ydata[1]+'1111')
+    st.write(ydata[1])
     fig = plt.figure(figsize=(4, 4), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
     ax.set_facecolor('azure')
