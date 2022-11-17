@@ -61,7 +61,7 @@ if nd != 0:
     xmin=xmin-dist*0.05
     xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
     fig = plt.figure(figsize=(4, 3), dpi=200)
-    ax = fig.add_axes([0.13,0.055,0.85,0.95])
+    ax = fig.add_axes([0.03,0.1,0.95,0.85])
     ax.set_facecolor('azure')
 
 
