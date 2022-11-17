@@ -55,7 +55,7 @@ if nd != 0:
         #st.write('---',float(response['data']['X'][i]),response['data']['Y'][i]) 
         xdata[i]=float(response['data']['X'][i])
         ydata[i]=float(response['data']['Y'][i])
-        st.write(xdata[i],ydata[i])
+        #st.write(xdata[i],ydata[i])
 
     st.write(ydata[1])
     fig = plt.figure(figsize=(4, 4), dpi=200)
