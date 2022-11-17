@@ -62,7 +62,8 @@ if nd != 0:
 
     #st.write(response['data']) 
     xdata = response['data']['X']
-    st.write(xdata[1])
+    ydata = response['data']['Y']
+    st.write(ydata[1])
 
 
 #    for i in range(1,nd):
