@@ -55,7 +55,7 @@ if nd != 0:
     #ydata = df['Y'][1]
     xdata
     ydata
-    #st.write(ydata)
+    st.write(ydata[1])
     fig = plt.figure(figsize=(4, 4), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
     ax.set_facecolor('azure')
