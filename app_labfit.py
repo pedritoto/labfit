@@ -18,8 +18,6 @@ with st.sidebar:
     st.markdown(" ## Etiquetas de los ejes")
     labelx = st.text_input('Eje x', 'X')
     labely = st.text_input('Eje y', 'Y')
-    
-
 
     st.image('Dorado.jpg')
     st.markdown(""" 
