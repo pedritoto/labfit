@@ -55,10 +55,10 @@ if nd != 0:
         xdata[i]=float(response['data']['X'][i])
         ydata[i]=float(response['data']['Y'][i])
     xmax = np.max(xdata)
+    xmin = np.min(xdata)
     dist=xmax-xmin
     xmax=xmax+dist*0.05
     xmin=xmin-dist*0.05
-    xmin = np.min(xdata)
     xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
     xx
     fig = plt.figure(figsize=(4, 4), dpi=200)
