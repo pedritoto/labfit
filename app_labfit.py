@@ -12,7 +12,7 @@ st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste po
 
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
-    optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
+    optfit = st.radio("Ajuste tipo:",('Lineal $ y = ax + b$', 'Potencial'))
     st.markdown(" ## Elige el número de datos (>2)")
     nd = st.number_input('',min_value=2, max_value=20, value=2, step=1)
     st.markdown(" ## Etiquetas de los ejes")
