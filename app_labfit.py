@@ -58,9 +58,9 @@ if nd != 0:
     if optfit == 'Lineal':
 
         coef = np.polyfit(xdata, ydata, 1)
-        poly1d_fn = np.poly1d(coef) 
-        fig.plot(xdata, ydata, 'yo', xdata, a*xdata+b, '--k')
-        st.pyplot(fig)
+        #poly1d_fn = np.poly1d(coef) 
+        #fig.plot(xdata, ydata, 'yo', xdata, a*xdata+b, '--k')
+        #st.pyplot(fig)
 
 #    for i in range(1,nd):
 #        dd = st.input_number
