@@ -48,8 +48,8 @@ if nd != 0:
      
     #xdata = response['data']['X'].to_numpy()
     #ydata = response['data']['Y'].to_numpy()
-    xdata = df['X']
-    ydata = df['Y']
+    xdata = df['X'][1]
+    ydata = df['Y'][1]
     xdata
     ydata
     #st.write(ydata)
