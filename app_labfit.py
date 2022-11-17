@@ -38,7 +38,7 @@ xdata=[]
 ydata=[]
 
 if nd != 0:
-    df = pd.DataFrame("",index=range(nd),columns=list("XY"),)
+    df = pd.DataFrame("",index=range(nd),columns=list("XY"))
 
     gb = GridOptionsBuilder.from_dataframe(df)
     gb.configure_default_column(editable=True)
