@@ -13,8 +13,8 @@ st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste po
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
     optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
-    st.markdown(" ## Elige el número de datos a ingresar")
-    ndata = st.number_input('')
+    st.markdown(" ## Elige el número de datos a ingresar (>2)")
+    nd = st.number_input(min_value=2, max_value=20, value=2, step=1)
     st.image('Dorado.jpg')
     st.markdown(""" 
              ### *Autores:*
