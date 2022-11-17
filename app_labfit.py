@@ -33,5 +33,37 @@ with st.sidebar:
              """)
 
 
-#if datain:
-  #  for i in range(1,nd):
+xdata=[]
+ydata=[]
+
+if datain:
+    df = pd.DataFrame(
+        "",
+        index=range(10),
+        columns=list("abcde"),
+    )
+
+    gb = GridOptionsBuilder.from_dataframe(df)
+    gb.configure_default_column(editable=True)
+
+    gb.configure_column('a',
+        cellEditor='agRichSelectCellEditor',
+        cellEditorParams={'values':['a','b','c']},
+        cellEditorPopup=True
+    )
+
+    gb.configure_grid_options(enableRangeSelection=True)
+
+
+    response = AgGrid(
+        df,
+        gridOptions=gb.build(),
+        fit_columns_on_grid_load=True,
+        allow_unsafe_jscode=True,
+        enable_enterprise_modules=True
+    )
+
+
+#    for i in range(1,nd):
+#        dd = st.input_number
+#        xd.append()
