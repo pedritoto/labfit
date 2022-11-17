@@ -53,7 +53,7 @@ if nd != 0:
         allow_unsafe_jscode=True,
         enable_enterprise_modules=True
     )
-    st.write(response)
+    st.write(gb)
 
 
 #    for i in range(1,nd):
