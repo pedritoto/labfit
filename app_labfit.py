@@ -79,6 +79,12 @@ if nd != 0:
             return a*np.power(x, b)
         # Fit the dummy power-law data
         pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
-        st.write(pars)
+        yy=power_law(xx,pars[0],pars[1])
+        ax.plot(xdata, ydata, 'yo', xx, yy, '--k')
+        ax.grid()
+        plt.xlabel(labelx)
+        plt.ylabel(labely)
+        st.pyplot(fig)
+        #st.write(pars)
 
 
