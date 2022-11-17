@@ -53,7 +53,7 @@ if nd != 0:
         allow_unsafe_jscode=True,
         enable_enterprise_modules=True
     )
-    st.write(df)
+    st.write(response)
 
 
 #    for i in range(1,nd):
