@@ -41,7 +41,7 @@ if nd != 0:
     df = pd.DataFrame(
         "",
         index=range(10),
-        columns=list("ab"),
+        columns=list("xy"),
     )
 
     gb = GridOptionsBuilder.from_dataframe(df)
