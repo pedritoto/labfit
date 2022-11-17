@@ -48,8 +48,8 @@ if nd != 0:
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         st.form_submit_button('Realizar ajuste')
-    xdata=np.empty(nd, dtype=float) 
-    ydata=np.empty(nd, dtype=float) 
+        xdata=np.empty(nd, dtype=float) 
+        ydata=np.empty(nd, dtype=float) 
 
     for i in range (0,nd):
         xdata[i]=float(response['data']['X'][i])
