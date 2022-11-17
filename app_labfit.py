@@ -38,20 +38,10 @@ xdata=[]
 ydata=[]
 
 if nd != 0:
-    df = pd.DataFrame(
-        "",
-        index=range(10),
-        columns=list("XY"),
-    )
+    df = pd.DataFrame("",index=range(nd),columns=list("XY"),)
 
     gb = GridOptionsBuilder.from_dataframe(df)
     gb.configure_default_column(editable=True)
-
-    #gb.configure_column('a',
-    #    cellEditor='agRichSelectCellEditor',
-    #    cellEditorParams={},
-    #    cellEditorPopup=True
-    #)
 
     gb.configure_grid_options(enableRangeSelection=True)
 
