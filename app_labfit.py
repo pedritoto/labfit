@@ -57,9 +57,12 @@ if nd != 0:
     with st.form('datos') as f:
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
-        st.form_submit_button()
-    st.write(response['data']) 
-   
+        st.form_submit_button('Realizar ajuste')
+    
+
+    #st.write(response['data']) 
+    xdata = response['X']
+    st.write(xdata)
 
 
 #    for i in range(1,nd):
