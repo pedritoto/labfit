@@ -15,7 +15,11 @@ with st.sidebar:
     optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
     st.markdown(" ## Elige el número de datos (>2)")
     nd = st.number_input('',min_value=2, max_value=20, value=2, step=1)
+    st.markdown(" ## Etiquetas de los ejes")
+    labelx = st.text_input('Eje x', 'X')
+    labely = st.text_input('Eje y', 'Y')
     
+
 
     st.image('Dorado.jpg')
     st.markdown(""" 
