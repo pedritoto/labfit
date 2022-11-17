@@ -49,7 +49,16 @@ if nd != 0:
     xdata = response['data']['X']
     ydata = response['data']['Y']
     st.write(ydata[1])
+    fig = plt.figure(figsize=(4, 4), dpi=200)
+    ax = fig.add_axes([0.03,0.055,0.95,0.95])
+    ax.set_facecolor('azure')
 
+
+
+    if optfit == 'Lineal':
+        a, b = np.polyfit(x, y, 1)
+        fig.plot(x, y, 'yo', x, m*x+b, '--k')
+        fig.show()
 
 #    for i in range(1,nd):
 #        dd = st.input_number
