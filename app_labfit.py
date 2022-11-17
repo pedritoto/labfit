@@ -52,7 +52,7 @@ if nd != 0:
     ydata=[]
 
     for i in range (0,nd):
-        st.write('---',response['data']['X'][i]) 
+        st.write('---',response['data']['X'][i],response['data']['X'][i]) 
         #xdata.append(float(response['data']['X'][i]))
         #ydata.append(float(response['data']['Y'][i]))
 
@@ -64,8 +64,8 @@ if nd != 0:
     #ydata = np.array(map(float, yd))
     #xdata = df['X'][1]
     #ydata = df['Y'][1]
-    xdata
-    ydata
+    #xdata
+    #ydata
     st.write(ydata[1]+'1111')
     fig = plt.figure(figsize=(4, 4), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
