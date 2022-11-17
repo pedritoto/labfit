@@ -53,9 +53,10 @@ if nd != 0:
         allow_unsafe_jscode=True,
         enable_enterprise_modules=True
     )
-    st.write(df)
+   
 
 
 #    for i in range(1,nd):
 #        dd = st.input_number
 #        xd.append()
+st.write(df)
