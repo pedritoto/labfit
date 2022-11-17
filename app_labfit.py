@@ -63,13 +63,14 @@ if nd != 0:
     fig = plt.figure(figsize=(4, 3), dpi=200)
     ax = fig.add_axes([0.03,0.055,0.95,0.95])
     ax.set_facecolor('azure')
-    ax.xlabel(labelx)
-    ax.ylabel(labely)
+
 
     if optfit == 'Lineal':
         coef = np.polyfit(xdata, ydata, 1)
         poly1d_fn = np.poly1d(coef) 
         ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k')
+        ax.xlabel(labelx)
+        ax.ylabel(labely)
         st.pyplot(fig)
     #else:
 
