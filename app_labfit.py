@@ -47,53 +47,54 @@ if nd != 0:
         gb.configure_column('Y',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.Y)).toFixed(2)') 
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
-        st.form_submit_button('Realizar ajuste')
+        bu = st.form_submit_button('Realizar ajuste')
+    if bu:   
         xdata=np.empty(nd, dtype=float) 
         ydata=np.empty(nd, dtype=float) 
 
-    for i in range (0,nd):
-        xdata[i]=float(response['data']['X'][i])
-        ydata[i]=float(response['data']['Y'][i])
-    xmax = np.max(xdata)
-    xmin = np.min(xdata)
-    dist=xmax-xmin
-    xmax=xmax+dist*0.05
-    xmin=xmin-dist*0.05
-    xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
-    fig = plt.figure(figsize=(4, 3), dpi=200)
-    ax = fig.add_axes([0.13,0.15,0.85,0.85])
-    ax.set_facecolor('azure')
+        for i in range (0,nd):
+            xdata[i]=float(response['data']['X'][i])
+            ydata[i]=float(response['data']['Y'][i])
+        xmax = np.max(xdata)
+        xmin = np.min(xdata)
+        dist=xmax-xmin
+        xmax=xmax+dist*0.05
+        xmin=xmin-dist*0.05
+        xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
+        fig = plt.figure(figsize=(4, 3), dpi=200)
+        ax = fig.add_axes([0.13,0.15,0.85,0.85])
+        ax.set_facecolor('azure')
 
 
-    if optfit == 'Lineal':
-        coef = np.polyfit(xdata, ydata, 1)
-        poly1d_fn = np.poly1d(coef) 
-        ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k')
-        ax.grid()
-        plt.xlabel(labelx)
-        plt.ylabel(labely)
-        st.pyplot(fig)
-        plt.savefig('plot.png')
-        st.markdown("### Ajuste:")
-        stri = "#### $ y = $ " + " {:.3f}".format(coef[0]) + " $x+$"+ " {:.3f}".format(coef[1])
-        st.markdown(stri)
-    else:
-        # Function to calculate the power-law with constants a and b
-        def power_law(x, a, b):
-            return a*np.power(x, b)
-        # Fit the dummy power-law data
-        pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
-        yy=power_law(xx,pars[0],pars[1])
-        ax.plot(xdata, ydata, 'ro', xx, yy, '--k')
-        ax.grid()
-        plt.xlabel(labelx)
-        plt.ylabel(labely)
-        st.pyplot(fig)
-        #st.write(pars)
-        st.markdown("### Ajuste:")
-        stri = "#### $ y = $ " + " {:.3f}".format(pars[0]) + " $x^{:.3f}".format(pars[1])
-        st.markdown(stri)
-        plt.savefig('plot.png')
+        if optfit == 'Lineal':
+            coef = np.polyfit(xdata, ydata, 1)
+            poly1d_fn = np.poly1d(coef) 
+            ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k')
+            ax.grid()
+            plt.xlabel(labelx)
+            plt.ylabel(labely)
+            st.pyplot(fig)
+            plt.savefig('plot.png')
+            st.markdown("### Ajuste:")
+            stri = "#### $ y = $ " + " {:.3f}".format(coef[0]) + " $x+$"+ " {:.3f}".format(coef[1])
+            st.markdown(stri)
+        else:
+            # Function to calculate the power-law with constants a and b
+            def power_law(x, a, b):
+                return a*np.power(x, b)
+            # Fit the dummy power-law data
+            pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
+            yy=power_law(xx,pars[0],pars[1])
+            ax.plot(xdata, ydata, 'ro', xx, yy, '--k')
+            ax.grid()
+            plt.xlabel(labelx)
+            plt.ylabel(labely)
+            st.pyplot(fig)
+            #st.write(pars)
+            st.markdown("### Ajuste:")
+            stri = "#### $ y = $ " + " {:.3f}".format(pars[0]) + " $x^{:.3f}".format(pars[1])
+            st.markdown(stri)
+            plt.savefig('plot.png')
 
 with open("plot.png", "rb") as file:
     btn = st.download_button(
