@@ -14,11 +14,11 @@ with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
     optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
     st.markdown(" ## Elige el número de datos (>2)")
-    nd = st.number_input('',min_value=2, max_value=20, value=2, step=1)
+    nd = st.number_input('',min_value=0, max_value=20, value=0, step=1)
     st.markdown(" ## Etiquetas de los ejes")
     labelx = st.text_input('Eje x', 'X')
     labely = st.text_input('Eje y', 'Y')
-    datain = st.button('Ingresar datos datos')
+    #datain = st.button('Ingresar datos datos')
 
     st.image('Dorado.jpg')
     st.markdown(""" 
@@ -37,7 +37,7 @@ with st.sidebar:
 xdata=[]
 ydata=[]
 
-if datain:
+if nd != 0:
     df = pd.DataFrame(
         "",
         index=range(10),
