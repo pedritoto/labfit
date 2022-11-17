@@ -59,4 +59,4 @@ if nd != 0:
 #    for i in range(1,nd):
 #        dd = st.input_number
 #        xd.append()
-st.write(df)
+st.write(df.head())
