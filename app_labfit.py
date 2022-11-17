@@ -12,5 +12,12 @@ st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste po
 
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
-    optfit = st.radio("Ajuste tipo:",
-    ('Lineal', 'Potencial'))
+    optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
+    st.image('Dorado.jpg')
+    st.markdown(""" 
+             ### *Autores:*
+             **Dr. Juan Pedro Palomares Báez**
+             **Dr. José Manuel Nápoles Duarte**
+             **MC. Carlos Armando de la Vega Cobos**
+             
+             """)
