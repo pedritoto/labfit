@@ -49,8 +49,8 @@ if nd != 0:
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         st.form_submit_button('Realizar ajuste')
      
-    xdata = response['data']['X'].to_numpy()
-    ydata = response['data']['Y'].to_numpy()
+    xdata = response['data']['X']
+    ydata = response['data']['Y']
     #xdata = df['X'][1]
     #ydata = df['Y'][1]
     xdata
