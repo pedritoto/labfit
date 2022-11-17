@@ -52,7 +52,7 @@ if nd != 0:
     ydata=[]
 
     for i in range (0,nd):
-        st.write('---',response['data']['X'][i]+'2',response['data']['Y'][i]) 
+        st.write('---',float(response['data']['X'][i]),response['data']['Y'][i]) 
         #xdata.append(float(response['data']['X'][i]))
         #ydata.append(float(response['data']['Y'][i]))
 
