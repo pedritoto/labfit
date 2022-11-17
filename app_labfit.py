@@ -69,8 +69,8 @@ if nd != 0:
         coef = np.polyfit(xdata, ydata, 1)
         poly1d_fn = np.poly1d(coef) 
         ax.plot(xdata, ydata, 'yo', xx, coef[0]*xx+coef[1], '--k')
-        ax.xlabel(labelx)
-        ax.ylabel(labely)
+        fig.xlabel(labelx)
+        fig.ylabel(labely)
         st.pyplot(fig)
     #else:
 
