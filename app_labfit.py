@@ -49,7 +49,7 @@ if nd != 0:
 
     gb.configure_column('a',
         cellEditor='agRichSelectCellEditor',
-        cellEditorParams={'values':['a','b','c']},
+        cellEditorParams={},
         cellEditorPopup=True
     )
 
