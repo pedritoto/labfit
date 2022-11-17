@@ -61,7 +61,7 @@ if nd != 0:
     
 
     #st.write(response['data']) 
-    xdata = response['X']
+    xdata = response['data']['X']
     st.write(xdata)
 
 
