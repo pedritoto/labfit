@@ -89,4 +89,12 @@ if nd != 0:
         #st.write(pars)
         plt.savefig('plot.png')
 
-
+with open("plot.png", "rb") as file:
+    btn = st.download_button(
+        label="Descargar imagen",
+        data=file,
+        file_name=None,
+        mime="image/png"
+        )
+    if btn:  
+        os.system("rm *.png") 
