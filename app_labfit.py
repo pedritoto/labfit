@@ -74,6 +74,9 @@ if nd != 0:
         plt.ylabel(labely)
         st.pyplot(fig)
         plt.savefig('plot.png')
+        st.markdown("### Ajuste:")
+        stri = "#### $ y = $ " + " {:.3f}".format(coef[0]) + " $x+$"+ " {:.3f}".format(coef[1])
+        st.markdown(stri)
     else:
         # Function to calculate the power-law with constants a and b
         def power_law(x, a, b):
@@ -87,6 +90,9 @@ if nd != 0:
         plt.ylabel(labely)
         st.pyplot(fig)
         #st.write(pars)
+        st.markdown("### Ajuste:")
+        stri = "#### $ y = $ " + " {:.3f}".format(pars[0]) + " $x^{:.3f}".format(pars[1])
+        st.markdown(stri)
         plt.savefig('plot.png')
 
 with open("plot.png", "rb") as file:
