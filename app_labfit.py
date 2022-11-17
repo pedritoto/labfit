@@ -73,6 +73,7 @@ if nd != 0:
         plt.xlabel(labelx)
         plt.ylabel(labely)
         st.pyplot(fig)
+        plt.savefig('plot.png')
     else:
         # Function to calculate the power-law with constants a and b
         def power_law(x, a, b):
@@ -86,5 +87,6 @@ if nd != 0:
         plt.ylabel(labely)
         st.pyplot(fig)
         #st.write(pars)
+        plt.savefig('plot.png')
 
 
