@@ -96,5 +96,5 @@ with open("plot.png", "rb") as file:
         file_name=None,
         mime="image/png"
         )
-    if btn:  
-        os.system("rm *.png") 
+    #if btn:  
+    #    os.system("rm *.png") 
