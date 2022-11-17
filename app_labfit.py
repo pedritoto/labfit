@@ -6,8 +6,8 @@ import os
 from matplotlib.transforms import IdentityTransform
 
 st.set_page_config(layout="wide")
-st.title("App para ajustes de datos experimentales")
-st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste potencial $ y = a x^b$ ")
+st.title("App para el ajuste de datos experimentales")
+st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste potencial $ y = a x^b$ ")
 
 
 with st.sidebar:
