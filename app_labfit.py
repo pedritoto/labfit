@@ -47,11 +47,11 @@ if nd != 0:
     gb = GridOptionsBuilder.from_dataframe(df)
     gb.configure_default_column(editable=True)
 
-    gb.configure_column('a',
-        cellEditor='agRichSelectCellEditor',
-        cellEditorParams={},
-        cellEditorPopup=True
-    )
+    #gb.configure_column('a',
+    #    cellEditor='agRichSelectCellEditor',
+    #    cellEditorParams={},
+    #    cellEditorPopup=True
+    #)
 
     gb.configure_grid_options(enableRangeSelection=True)
 
