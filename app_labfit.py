@@ -33,5 +33,5 @@ with st.sidebar:
              """)
 
 
-if datain:
-    for i in range(1,nd):
+#if datain:
+  #  for i in range(1,nd):
