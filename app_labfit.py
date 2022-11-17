@@ -42,14 +42,17 @@ if nd != 0:
     df = pd.DataFrame("",index=range(nd),columns=list("XY"))
 
     with st.form('datos') as f:
+        gb = GridOptionsBuilder.from_dataframe(df) 
+        gb.configure_column(YourColumnNameHeader, 
+        type=["numericColumn","numberColumnFilter","customNumericFormat"], precision=4)
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         st.form_submit_button('Realizar ajuste')
      
-    #xdata = response['data']['X'].to_numpy()
-    #ydata = response['data']['Y'].to_numpy()
-    xdata = df['X'][1]
-    ydata = df['Y'][1]
+    xdata = response['data']['X'].to_numpy()
+    ydata = response['data']['Y'].to_numpy()
+    #xdata = df['X'][1]
+    #ydata = df['Y'][1]
     xdata
     ydata
     #st.write(ydata)
