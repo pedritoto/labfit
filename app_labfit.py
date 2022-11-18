@@ -78,14 +78,14 @@ if nd != 0:
             nu2="{:.3f}".format(abs(coef[1]))
             if coef[0]<0.0:
                 if coef[1]<0.0:
-                    stri = " ### $ y = -" + nu1+ "~x - "+nu2+"$"
+                    stri = " $ y = -" + nu1+ "~x - "+nu2+"$"
                 else:
-                    stri = " ### $ y = -" + nu1+ "~x + "+nu2+"$"
+                    stri = " $ y = -" + nu1+ "~x + "+nu2+"$"
             else:
                 if coef[1]<0.0:
-                    stri = " ### $ y = " + nu1+ "~x - "+nu2+"$"
+                    stri = " $ y = " + nu1+ "~x - "+nu2+"$"
                 else:
-                    stri = " ### $ y = " + nu1+ "~x + "+nu2+"$"                
+                    stri = " $ y = " + nu1+ "~x + "+nu2+"$"                
             st.markdown('####'+stri)
             st.markdown("### Gráfica:")
             ax.plot(xdata, ydata, 'ro',label='Experimento')
