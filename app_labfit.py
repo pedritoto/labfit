@@ -99,7 +99,9 @@ if nd != 0:
             # Fit the dummy power-law data
             pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
             yy=power_law(xx,pars[0],pars[1])
-            ax.plot(xdata, ydata, 'ro', xx, yy, '-k')
+            ax.plot(xdata, ydata, 'ro',label='Experimento')
+            ax.plot(xx, yy, '-k',label='Ajuste')
+            ax.legend(loc='upper left', shadow=True, fontsize='small')
             ax.grid()
             plt.xlabel(labelx)
             plt.ylabel(labely)
