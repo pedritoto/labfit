@@ -92,7 +92,7 @@ if nd != 0:
             st.pyplot(fig)
             #st.write(pars)
             st.markdown("### Ajuste:")
-            stri = "#### $ y = {:.3f}".format(pars[0]) + "x^{:.3f}".format(pars[1])+"$"
+            stri = "#### $ y = {:.3f}".format(pars[0]) + "x^{{:.3f}}".format(pars[1])+"$"
             st.markdown(stri)
             plt.savefig('plot.png')
 
