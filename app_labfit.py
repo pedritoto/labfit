@@ -25,11 +25,13 @@ with st.sidebar:
     ('azure', 'whitesmoke', 'linen','ivory','aliceblue','ghostwhite','lightpink'))
     mark = st.selectbox('símbolo de los datos',
     ('círculo', 'diamante', 'triángulo','pentágono','estrella','equis','cruz'))
-    mcolor = st.selectbox('color del símbolo',
+    mcol = st.selectbox('color del símbolo',
     ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
-    lcolor = st.selectbox('color de línea de ajuste',
+    lcol = st.selectbox('color de línea de ajuste',
     ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
-
+    
+    marke = switch_color(mark)
+    st.write('marcador = ',marke)
 
     st.image('Dorado.jpg')
     st.markdown(""" 
@@ -47,7 +49,6 @@ with st.sidebar:
 
 xdata=[]
 ydata=[]
-
 
 if nd != 0:
     df = pd.DataFrame("",index=range(nd),columns=list("XY"))
@@ -126,3 +127,17 @@ with open("plot.png", "rb") as file:
         )
     #if btn:  
     #    os.system("rm *.png") 
+
+
+
+def switch_color(argument):
+    switcher = {
+        'o': "círculo",
+        'D': "diamante",
+        '^': "triángulo",
+        'p': "pentágono",
+        '*': "estrella",
+        'x': "equis",
+        '+': "cruz",
+    }
+    return switcher
