@@ -12,6 +12,18 @@ st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste po
 def power_law(x, a, b):
     return a*np.power(x, b)
 
+def switch_color(argument):
+    switcher = {
+        'o': "círculo",
+        'D': "diamante",
+        '^': "triángulo",
+        'p': "pentágono",
+        '*': "estrella",
+        'x': "equis",
+        '+': "cruz",
+    }
+    return switcher    
+
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
     optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
@@ -130,14 +142,3 @@ with open("plot.png", "rb") as file:
 
 
 
-def switch_color(argument):
-    switcher = {
-        'o': "círculo",
-        'D': "diamante",
-        '^': "triángulo",
-        'p': "pentágono",
-        '*': "estrella",
-        'x': "equis",
-        '+': "cruz",
-    }
-    return switcher
