@@ -63,7 +63,7 @@ if nd != 0:
         xmax=xmax+dist*0.1
         xmin=xmin-dist*0.1
         xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
-        fig = plt.figure(figsize=(5, 4), dpi=200)
+        fig = plt.figure(figsize=(4.5, 3.5), dpi=200)
         ax = fig.add_axes([0.17,0.17,0.8,0.8])
         ax.set_facecolor('azure')
         ax.grid(True,lw=0.8,linestyle='--',zorder=0)
