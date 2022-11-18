@@ -64,7 +64,7 @@ if nd != 0:
         fig = plt.figure(figsize=(4, 3), dpi=200)
         ax = fig.add_axes([0.13,0.15,0.85,0.85])
         ax.set_facecolor('azure')
-        ax.legend(loc='upper left', shadow=True, fontsize='small')
+    
 
         ax.grid(True,lw=0.8,linestyle='--',zorder=0)
         plt.xlabel(labelx,fontsize='x-large')
@@ -75,7 +75,7 @@ if nd != 0:
             poly1d_fn = np.poly1d(coef) 
             ax.plot(xdata, ydata, 'ro',label='Experimento')
             ax.plot(xx, coef[0]*xx+coef[1], '-k',label='Ajuste')
-
+            ax.legend(loc='upper left', shadow=True, fontsize='small')
             st.pyplot(fig)
             plt.savefig('plot.png')
             st.markdown("### Ajuste:")
