@@ -51,8 +51,6 @@ def sel_color(col):
             return 'black'
 
 
-
-
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
     optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
