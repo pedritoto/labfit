@@ -125,7 +125,7 @@ if nd != 0:
             st.markdown('#### '+stri)
             st.markdown("### Gráfica:")
             yy=power_law(xx,pars[0],pars[1])
-            ax.plot(xdata, ydata, 'r',marker=marke,ms = 7,mec = 'k',label='Experimento')
+            ax.plot(xdata, ydata, 'ro',marker=marke,ms = 7,mec = 'k',label='Experimento')
             ax.plot(xx, yy, '-g',lw=1.0,label=stri)
             ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
