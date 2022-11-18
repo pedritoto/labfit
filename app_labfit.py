@@ -93,7 +93,7 @@ if nd != 0:
             #st.write(pars)
             st.markdown("### Ajuste:")
             pot="{:.3f}".format(pars[1])
-            stri = "#### $ y = {:.3f}".format(pars[0]) + "~x^{"+pot+"}$"
+            stri = "### $ y = {:.3f}".format(pars[0]) + "~x^{"+pot+"}$"
             st.markdown(stri)
             plt.savefig('plot.png')
 
