@@ -76,7 +76,16 @@ if nd != 0:
             st.pyplot(fig)
             plt.savefig('plot.png')
             st.markdown("### Ajuste:")
-            stri = "#### $ y = $ " + " {:.3f}".format(coef[0]) + " $x+$"+ " {:.3f}".format(coef[1])
+            if coef[0]<0.0:
+                if coef[1]<0.0:
+                    stri = "#### $ y = -$ " + " {:.3f}".format(abs(coef[0])) + " $x - $"+ " {:.3f}".format(abs(coef[1]))
+                else:
+                    stri = "#### $ y = -$ " + " {:.3f}".format(abs(coef[0])) + " $x + $"+ " {:.3f}".format(abs(coef[1]))
+            else:
+                if coef[1]<0.0:
+                    stri = "#### $ y = $ " + " {:.3f}".format(abs(coef[0])) + " $x - $"+ " {:.3f}".format(abs(coef[1]))
+                else:
+                    stri = "#### $ y = $ " + " {:.3f}".format(abs(coef[0])) + " $x + $"+ " {:.3f}".format(abs(coef[1]))                
             st.markdown(stri)
         else:
             # Function to calculate the power-law with constants a and b
