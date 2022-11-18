@@ -58,8 +58,8 @@ if nd != 0:
         xmax = np.max(xdata)
         xmin = np.min(xdata)
         dist=xmax-xmin
-        xmax=xmax+dist*0.25
-        xmin=xmin-dist*0.25
+        xmax=xmax+dist*0.1
+        xmin=xmin-dist*0.1
         xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
         fig = plt.figure(figsize=(4, 3), dpi=200)
         ax = fig.add_axes([0.13,0.15,0.85,0.85])
