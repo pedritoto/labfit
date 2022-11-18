@@ -9,6 +9,8 @@ st.set_page_config(layout="wide")
 st.title("App para el ajuste de datos experimentales")
 st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste potencial $ y = a x^b$ ")
 
+def power_law(x, a, b):
+    return a*np.power(x, b)
 
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
@@ -64,8 +66,6 @@ if nd != 0:
         fig = plt.figure(figsize=(4, 3), dpi=200)
         ax = fig.add_axes([0.13,0.15,0.85,0.85])
         ax.set_facecolor('azure')
-    
-
         ax.grid(True,lw=0.8,linestyle='--',zorder=0)
         plt.xlabel(labelx,fontsize='x-large')
         plt.ylabel(labely,fontsize='x-large')
@@ -94,25 +94,19 @@ if nd != 0:
             plt.savefig('plot.png')
             st.pyplot(fig)
         else:
-            # Function to calculate the power-law with constants a and b
-            def power_law(x, a, b):
-                return a*np.power(x, b)
             # Fit the dummy power-law data
             pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
+            pot="{:.3f}".format(pars[1])
+            stri = " $ y = {:.3f}".format(pars[0]) + "~x^{~"+pot+"}$"
+            st.markdown("### Ajuste:")
+            st.markdown('#### '+stri)
+            st.markdown("### Gráfica:")
             yy=power_law(xx,pars[0],pars[1])
             ax.plot(xdata, ydata, 'ro',label='Experimento')
-            ax.plot(xx, yy, '-k',label='Ajuste')
-            #ax.legend(loc='upper left', shadow=True, fontsize='small')
-            ax.grid()
-            #plt.xlabel(labelx)
-            #plt.ylabel(labely)
-            st.pyplot(fig)
-            #st.write(pars)
-            st.markdown("### Ajuste:")
-            pot="{:.3f}".format(pars[1])
-            stri = "### $ y = {:.3f}".format(pars[0]) + "~x^{~"+pot+"}$"
-            st.markdown(stri)
+            ax.plot(xx, yy, '-k',label=stri)
+            ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
+            st.pyplot(fig)            
 
 with open("plot.png", "rb") as file:
     btn = st.download_button(
