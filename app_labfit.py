@@ -71,8 +71,13 @@ with st.sidebar:
     lcol = st.selectbox('color de línea de ajuste',
     ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
     
-    marke = switch_color(mark)
-    st.write('marcador = ',marke,mark)
+    marke = sel_mtype(mark)
+    st.write('marcador = ',mark,marke)
+    mcolor = sel_color(mcol)
+    st.write('color marcador = ',mcol,mcolor)
+    lcolor = sel_color(lcol)
+    st.write('color linea = ',lcol,lcolor)
+    st.write('color background = ',gcolor)
 
     st.image('Dorado.jpg')
     st.markdown(""" 
@@ -116,7 +121,7 @@ if nd != 0:
         xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
         fig = plt.figure(figsize=(4.5, 3.5), dpi=200)
         ax = fig.add_axes([0.17,0.17,0.8,0.8])
-        ax.set_facecolor('whitesmoke')
+        ax.set_facecolor(gcolor)
         ax.grid(True,lw=0.8,linestyle='--',zorder=0)
         plt.xlabel(labelx,fontsize='x-large')
         plt.ylabel(labely,fontsize='x-large')
@@ -139,8 +144,8 @@ if nd != 0:
                     stri = " $ y = " + nu1+ "~x + "+nu2+"$"                
             st.markdown('####'+stri)
             st.markdown("### Gráfica:")
-            ax.plot(xdata, ydata, marke,color='red',ms = 7,mec = 'k',label='Experimento')
-            ax.plot(xx, coef[0]*xx+coef[1], '-g',lw=1.0,label=stri)
+            ax.plot(xdata, ydata,marke,color=mcolor,ms = 7,mec = 'k',label='Experimento')
+            ax.plot(xx, coef[0]*xx+coef[1], '-',color=lcolor,lw=1.0,label=stri)
             ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
             st.pyplot(fig)
@@ -153,8 +158,8 @@ if nd != 0:
             st.markdown('#### '+stri)
             st.markdown("### Gráfica:")
             yy=power_law(xx,pars[0],pars[1])
-            ax.plot(xdata, ydata, 'ro',marker=marke,ms = 7,mec = 'k',label='Experimento')
-            ax.plot(xx, yy, '-g',lw=1.0,label=stri)
+            ax.plot(xdata, ydata,marke,color=mcolor,ms = 7,mec = 'k',label='Experimento')
+            ax.plot(xx, yy, '-',color=lcolor,lw=1.0,label=stri)
             ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
             st.pyplot(fig)            
