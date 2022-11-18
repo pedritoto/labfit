@@ -69,7 +69,8 @@ if nd != 0:
         if optfit == 'Lineal':
             coef = np.polyfit(xdata, ydata, 1)
             poly1d_fn = np.poly1d(coef) 
-            ax.plot(xdata, ydata, 'ro', xx, coef[0]*xx+coef[1], '-k')
+            ax.plot(xdata, ydata, 'ro')
+            ax.plot(xx, coef[0]*xx+coef[1], '-k')
             ax.grid()
             plt.xlabel(labelx)
             plt.ylabel(labely)
