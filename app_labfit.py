@@ -89,7 +89,7 @@ if nd != 0:
             st.markdown('####'+stri)
             st.markdown("### Gráfica:")
             ax.plot(xdata, ydata, 'ro',marker='p',ms = 5,mec = 'k',label='Experimento')
-            ax.plot(xx, coef[0]*xx+coef[1], '-dg',lw=1.0,label=stri)
+            ax.plot(xx, coef[0]*xx+coef[1], '-g',lw=1.0,label=stri)
             ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
             st.pyplot(fig)
