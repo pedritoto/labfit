@@ -64,7 +64,7 @@ if nd != 0:
         xmin=xmin-dist*0.1
         xx=np.linspace(xmin, xmax, num=40, endpoint=True, dtype=float)
         fig = plt.figure(figsize=(4, 3), dpi=200)
-        ax = fig.add_axes([0.17,0.17,0.85,0.83])
+        ax = fig.add_axes([0.17,0.17,0.95,0.83])
         ax.set_facecolor('azure')
         ax.grid(True,lw=0.8,linestyle='--',zorder=0)
         plt.xlabel(labelx,fontsize='x-large')
