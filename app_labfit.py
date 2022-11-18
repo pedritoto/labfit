@@ -14,25 +14,25 @@ def power_law(x, a, b):
 
 def sel_mtype(mty):
     marca={
-    'o':'círculo',
-    'D':'diamante',
-    '^':'triángulo',
-    'p':'pentágono',
-    '*':'estrella',
-    'x':'equis',
-    '+':'cruz'}
+    'o': 'círculo',
+    'D': 'diamante',
+    '^': 'triángulo',
+    'p': 'pentágono',
+    '*': 'estrella',
+    'x': 'equis',
+    '+': 'cruz',}
     return marca.get(mty,'o')
 
 
 def sel_color(col):
     colorr={
-    'black':'negro',
-    'red':'rojo',
-    'blue':'azul',
-    'darkgreen':'verde',
-    'orange':'naranja',
-    'violet':'violeta',
-    'yellow':'amarillo'}
+    'black': 'negro',
+    'red': 'rojo',
+    'blue': 'azul',
+    'darkgreen': 'verde',
+    'orange': 'naranja',
+    'violet': 'violeta',
+    'yellow': 'amarillo',}
     return colorr.get(col,'black')
 
 
