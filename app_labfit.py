@@ -74,9 +74,10 @@ if nd != 0:
             coef = np.polyfit(xdata, ydata, 1)
             poly1d_fn = np.poly1d(coef) 
             ax.plot(xdata, ydata, 'ro',label='Experimento')
+            
             ax.plot(xx, coef[0]*xx+coef[1], '-k',label='Ajuste')
             ax.legend(loc='upper left', shadow=True, fontsize='small')
-            st.pyplot(fig)
+            
             plt.savefig('plot.png')
             st.markdown("### Ajuste:")
             nu1="{:.3f}".format(abs(coef[0]))
@@ -92,6 +93,7 @@ if nd != 0:
                 else:
                     stri = "### $ y = " + nu1+ "~x + "+nu2+"$"                
             st.markdown(stri)
+            st.pyplot(fig)
         else:
             # Function to calculate the power-law with constants a and b
             def power_law(x, a, b):
