@@ -25,6 +25,8 @@ def switch_color(argument):
     return switcher.get(argument, 'o') 
 
 
+
+
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
     optfit = st.radio("Ajuste tipo:",('Lineal', 'Potencial'))
@@ -44,7 +46,7 @@ with st.sidebar:
     ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
     
     marke = switch_color(mark)
-    st.write('marcador = ',marke)
+    st.write('marcador = ',marke,mark)
 
     st.image('Dorado.jpg')
     st.markdown(""" 
