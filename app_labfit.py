@@ -69,7 +69,7 @@ if nd != 0:
         if optfit == 'Lineal':
             coef = np.polyfit(xdata, ydata, 1)
             poly1d_fn = np.poly1d(coef) 
-            ax.plot(xdata, ydata, 'ro', xx, coef[0]*xx+coef[1], '--k')
+            ax.plot(xdata, ydata, 'ro', xx, coef[0]*xx+coef[1], '-k')
             ax.grid()
             plt.xlabel(labelx)
             plt.ylabel(labely)
@@ -94,7 +94,7 @@ if nd != 0:
             # Fit the dummy power-law data
             pars, cov = curve_fit(f=power_law, xdata=xdata, ydata=ydata, p0=[0, 0], bounds=(-np.inf, np.inf))
             yy=power_law(xx,pars[0],pars[1])
-            ax.plot(xdata, ydata, 'ro', xx, yy, '--k')
+            ax.plot(xdata, ydata, 'ro', xx, yy, '-k')
             ax.grid()
             plt.xlabel(labelx)
             plt.ylabel(labely)
