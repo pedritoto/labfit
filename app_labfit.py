@@ -71,7 +71,7 @@ if nd != 0:
             poly1d_fn = np.poly1d(coef) 
             ax.plot(xdata, ydata, 'ro',label='Experimento')
             ax.plot(xx, coef[0]*xx+coef[1], '-k',label='Ajuste')
-            ax.legend(loc='upper left', shadow=True, fontsize='x-small')
+            ax.legend(loc='upper left', shadow=True, fontsize='medium')
 
             ax.grid(True,lw=0.8,linestyle='--',zorder=0)
             plt.xlabel(labelx,fontsize='x-large')
