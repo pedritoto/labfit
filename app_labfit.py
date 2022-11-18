@@ -12,17 +12,43 @@ st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste po
 def power_law(x, a, b):
     return a*np.power(x, b)
 
-def switch_color(argument):
-    switcher = {
-        'o':'círculo',
-        'D':'diamante',
-        '^':'triángulo',
-        'p':'pentágono',
-        '*':'estrella',
-        'x':'equis',
-        '+':'cruz',
-    }
-    return switcher.get(argument, 'o') 
+def sel_mtype(mty):
+    match mty:
+        case 'círculo':
+            return 'o'
+        case 'diamante':
+            return 'D'
+        case 'triángulo':
+            return '^'
+        case 'pentágono':
+            return 'p'
+        case 'estrella':
+            return '*'
+        case 'equis':
+            return 'x'
+        case 'cruz':
+            return '+'    
+        case default:
+            return 'o'
+
+def sel_color(col):
+    match col:
+        case 'negro':
+            return 'black'
+        case 'rojo':
+            return 'red'
+        case 'azul':
+            return 'blue'
+        case 'verde':
+            return 'darkgreen'
+        case 'naranja':
+            return 'orange'
+        case 'violeta':
+            return 'violet'
+        case 'amarillo':
+            return 'yellow'    
+        case default:
+            return 'black'
 
 
 
