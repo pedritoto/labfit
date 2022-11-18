@@ -22,7 +22,7 @@ def switch_color(argument):
         'x': "equis",
         '+': "cruz",
     }
-    return switcher    
+    return switcher.get(argument, 'o') 
 
 with st.sidebar:
     st.markdown(" ## Elige la opción de ajuste ")
