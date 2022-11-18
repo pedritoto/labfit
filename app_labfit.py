@@ -74,8 +74,8 @@ if nd != 0:
             ax.legend(loc='upper center', shadow=True, fontsize='x-small')
 
             ax.grid(True,lw=0.8,linestyle='--',zorder=0)
-            plt.xlabel(labelx)
-            plt.ylabel(labely)
+            plt.xlabel(labelx,fontsize='x-small')
+            plt.ylabel(labely,fontsize='x-small')
             st.pyplot(fig)
             plt.savefig('plot.png')
             st.markdown("### Ajuste:")
