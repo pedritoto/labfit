@@ -26,10 +26,10 @@ with st.sidebar:
     mark = st.selectbox('símbolo de los datos',
     ('círculo', 'diamante', 'triángulo','pentágono','estrella','equis','cruz'))
     mcolor = st.selectbox('color del símbolo',
-    ('negro',rojo', 'azul', 'verde','naranja','violeta','amarillo'))
+    ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
     lcolor = st.selectbox('color de línea de ajuste',
-    ('negro',rojo', 'azul', 'verde','naranja','violeta','amarillo'))
-            
+    ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
+
 
     st.image('Dorado.jpg')
     st.markdown(""" 
