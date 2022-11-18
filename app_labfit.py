@@ -73,7 +73,7 @@ if nd != 0:
             ax.plot(xx, coef[0]*xx+coef[1], '-k',label='Ajuste')
             ax.legend(loc='upper center', shadow=True, fontsize='x-small')
 
-            ax.grid('--')
+            ax.grid(True,lw=0.8,linestyle='--',zorder=0)
             plt.xlabel(labelx)
             plt.ylabel(labely)
             st.pyplot(fig)
