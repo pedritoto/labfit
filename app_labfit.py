@@ -20,7 +20,16 @@ with st.sidebar:
     st.markdown(" ## Etiquetas de los ejes")
     labelx = st.text_input('Eje x', 'X')
     labely = st.text_input('Eje y', 'Y')
-    #datain = st.button('Ingresar datos datos')
+    st.markdown(" ## Opciones de la gráfica")   
+    gcolor = st.selectbox('color del fondo',
+    ('azure', 'whitesmoke', 'linen','ivory','aliceblue','ghostwhite','lightpink'))
+    mark = st.selectbox('símbolo de los datos',
+    ('círculo', 'diamante', 'triángulo','pentágono','estrella','equis','cruz'))
+    mcolor = st.selectbox('color del símbolo',
+    ('negro',rojo', 'azul', 'verde','naranja','violeta','amarillo'))
+    lcolor = st.selectbox('color de línea de ajuste',
+    ('negro',rojo', 'azul', 'verde','naranja','violeta','amarillo'))
+            
 
     st.image('Dorado.jpg')
     st.markdown(""" 
@@ -49,7 +58,7 @@ if nd != 0:
         gb.configure_column('Y',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.Y)).toFixed(2)') 
         st.header('DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
-        bu = st.form_submit_button('Realizar ajuste')
+        bu = st.form_submit_button('Realizar ajuste y graficar')
     if bu:   
         xdata=np.empty(nd, dtype=float) 
         ydata=np.empty(nd, dtype=float) 
