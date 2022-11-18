@@ -13,42 +13,27 @@ def power_law(x, a, b):
     return a*np.power(x, b)
 
 def sel_mtype(mty):
-    match mty:
-        case 'círculo':
-            return 'o'
-        case 'diamante':
-            return 'D'
-        case 'triángulo':
-            return '^'
-        case 'pentágono':
-            return 'p'
-        case 'estrella':
-            return '*'
-        case 'equis':
-            return 'x'
-        case 'cruz':
-            return '+'    
-        case default:
-            return 'o'
+    marca={
+    'o':'círculo',
+    'D':'diamante',
+    '^':'triángulo',
+    'p':'pentágono',
+    '*':'estrella',
+    'x':'equis',
+    '+':'cruz'}
+    return marca.get(mty,'o')
+
 
 def sel_color(col):
-    match col:
-        case 'negro':
-            return 'black'
-        case 'rojo':
-            return 'red'
-        case 'azul':
-            return 'blue'
-        case 'verde':
-            return 'darkgreen'
-        case 'naranja':
-            return 'orange'
-        case 'violeta':
-            return 'violet'
-        case 'amarillo':
-            return 'yellow'    
-        case default:
-            return 'black'
+    colorr={
+    'black':'negro',
+    'red':'rojo',
+    'blue':'azul',
+    'darkgreen':'verde',
+    'orange':'naranja',
+    'violet':'violeta',
+    'yellow':'amarillo'}
+    return colorr.get(col,'black')
 
 
 with st.sidebar:
