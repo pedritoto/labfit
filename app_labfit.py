@@ -14,13 +14,13 @@ def power_law(x, a, b):
 
 def switch_color(argument):
     switcher = {
-        'o': "círculo",
-        'D': "diamante",
-        '^': "triángulo",
-        'p': "pentágono",
-        '*': "estrella",
-        'x': "equis",
-        '+': "cruz",
+        'o':"círculo",
+        'D':"diamante",
+        '^':"triángulo",
+        'p':"pentágono",
+        '*':"estrella",
+        'x':"equis",
+        '+':"cruz",
     }
     return switcher.get(argument, 'o') 
 
