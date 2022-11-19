@@ -103,7 +103,6 @@ if nd != 0:
         xmax=xmax+dist*0.1
         xmin=xmin-dist*0.1
         xx=np.linspace(xmin, xmax, num=50, endpoint=True, dtype=float)
-        st.write(xx)
         fig = plt.figure(figsize=(4.5, 3.5), dpi=200)
         ax = fig.add_axes([0.17,0.17,0.8,0.8])
         ax.set_facecolor(gcolor)
