@@ -26,13 +26,13 @@ def sel_mtype(mty):
 
 def sel_color(col):
     colorr={
-    "black": "negro",
-    "red": "rojo",
-    "blue": "azul",
-    "darkgreen": "verde",
-    "orange": "naranja",
-    "violet": "violeta",
-    "yellow": "amarillo",}
+    "negro":    "black",
+    "rojo":     "red",
+    "azul":     "blue",
+    "verde":    "darkgreen",
+    "maranja":  "orange",
+    "violeta":  "violet",
+    "amarillo": "yellow",}
     return colorr.get(col,"black")
 
 
