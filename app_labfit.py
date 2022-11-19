@@ -127,7 +127,7 @@ if nd != 0:
                     stri = " $ y = " + nu1+ "~x + "+nu2+"$"                
             st.markdown('####'+stri)
             st.markdown("### Gráfica:")
-            ax.plot(xdata, ydata,marke,color=mcolor,ms = 8,mec = 'k',mew=0.8,label='Experimento')
+            ax.plot(xdata, ydata,marke,color=mcolor,ms = 8,mec = 'k',mew=0.4,label='Experimento')
             ax.plot(xx, coef[0]*xx+coef[1], '-',color=lcolor,lw=1.0,label=stri)
             ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
