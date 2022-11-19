@@ -15,7 +15,7 @@ def power_law(x, a, b):
 def sel_mtype(mty):
     marca={
     "círculo":   "o",
-    "cuadrado":  "s"  
+    "cuadrado":  "s",  
     "triángulo": "^",
     "diamante":  "D",
     "pentágono": "p",
