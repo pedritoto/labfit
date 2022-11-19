@@ -15,8 +15,9 @@ def power_law(x, a, b):
 def sel_mtype(mty):
     marca={
     "círculo":   "o",
-    "diamante":  "D",
+    "cuadrado":  "s"  
     "triángulo": "^",
+    "diamante":  "D",
     "pentágono": "p",
     "estrella":  "*",
     "equis":     "x",
@@ -48,7 +49,7 @@ with st.sidebar:
     gcolor = st.selectbox('color del fondo',
     ('azure', 'whitesmoke', 'linen','ivory','aliceblue','ghostwhite','lightpink'))
     mark = st.selectbox('símbolo de los datos',
-    ('círculo', 'diamante', 'triángulo','pentágono','estrella','equis','cruz'))
+    ('círculo','cuadrado', 'diamante', 'triángulo','pentágono','estrella','equis','cruz'))
     mcol = st.selectbox('color del símbolo',
     ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
     lcol = st.selectbox('color de línea de ajuste',
