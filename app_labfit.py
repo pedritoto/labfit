@@ -14,13 +14,13 @@ def power_law(x, a, b):
 
 def sel_mtype(mty):
     marca={
-    "o": "círculo",
-    "D": "diamante",
-    "^": "triángulo",
-    "p": "pentágono",
-    "*": "estrella",
-    "x": "equis",
-    "+": "cruz",}
+    "círculo":   "o",
+    "diamante":  "D",
+    "triángulo": "^",
+    "pentágono": "p",
+    "estrella":  "*",
+    "equis":     "x",
+    "cruz":"+",}
     return marca.get(mty,"o")
 
 
