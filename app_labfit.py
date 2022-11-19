@@ -30,7 +30,7 @@ def sel_color(col):
     "rojo":     "red",
     "azul":     "blue",
     "verde":    "darkgreen",
-    "maranja":  "orange",
+    "naranja":  "orange",
     "violeta":  "violet",
     "amarillo": "yellow",}
     return colorr.get(col,"black")
