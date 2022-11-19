@@ -127,7 +127,7 @@ if nd != 0:
                     stri = " $ y = " + nu1+ "~x + "+nu2+"$"                
             st.markdown('####'+stri)
             st.markdown("### Gráfica:")
-            ax.plot(xdata, ydata,marke,color=mcolor,ms = 7,mec = 'k',mew=0.5,label='Experimento')
+            ax.plot(xdata, ydata,marke,color=mcolor,ms = 7,mec = 'k',mew=0.6,label='Experimento')
             ax.plot(xx, coef[0]*xx+coef[1], '-',color=lcolor,lw=1.0,label=stri)
             ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
@@ -141,7 +141,7 @@ if nd != 0:
             st.markdown('#### '+stri)
             st.markdown("### Gráfica:")
             yy=power_law(xx,pars[0],pars[1])
-            ax.plot(xdata, ydata,marke,color=mcolor,ms = 7,mec = 'k',mew=0.5,label='Experimento')
+            ax.plot(xdata, ydata,marke,color=mcolor,ms = 7,mec = 'k',mew=0.6,label='Experimento')
             ax.plot(xx, yy, '-',color=lcolor,lw=1.0,label=stri)
             ax.legend(loc='upper left', shadow=True, fontsize='small')
             plt.savefig('plot.png')
