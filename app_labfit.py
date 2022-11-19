@@ -55,12 +55,12 @@ with st.sidebar:
     ('negro','rojo', 'azul', 'verde','naranja','violeta','amarillo'))
     
     marke = sel_mtype(mark)
-    st.write('marcador = ',mark,marke)
+    #st.write('marcador = ',mark,marke)
     mcolor = sel_color(mcol)
-    st.write('color marcador = ',mcol,mcolor)
+    #st.write('color marcador = ',mcol,mcolor)
     lcolor = sel_color(lcol)
-    st.write('color linea = ',lcol,lcolor)
-    st.write('color background = ',gcolor)
+    #st.write('color linea = ',lcol,lcolor)
+    #st.write('color background = ',gcolor)
 
     st.image('Dorado.jpg')
     st.markdown(""" 
