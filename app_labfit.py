@@ -7,9 +7,9 @@ from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
 
 st.set_page_config(layout="wide")
 st.title("App para el ajuste de datos experimentales")
-st.markdown(""" ### Ajustes: 
-#### lineal:    $~~~ y = ax + b$ 
-#### potencial:    $~~~ y = a x^b$ """)
+st.markdown(""" ## Ajustes: 
+### lineal:    $~~~ y = ax + b$ 
+### potencial:    $~~~ y = a x^b$ """)
 
 def power_law(x, a, b):
     return a*np.power(x, b)
@@ -89,7 +89,7 @@ if nd != 0:
         gb = GridOptionsBuilder.from_dataframe(df) 
         gb.configure_column('X',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.X)).toFixed(2)')
         gb.configure_column('Y',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.Y)).toFixed(2)') 
-        st.header('DATOS:')
+        st.markdown('### DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         bu = st.form_submit_button('Realizar ajuste y graficar')
     if bu:   
