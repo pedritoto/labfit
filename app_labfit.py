@@ -89,7 +89,7 @@ if nd != 0:
         gb = GridOptionsBuilder.from_dataframe(df) 
         gb.configure_column('X',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.X)).toFixed(2)')
         gb.configure_column('Y',type=["numericColumn","numberColumnFilter","customNumericFormat"],valueGetter='(Number(data.Y)).toFixed(2)') 
-        st.markdown('### DATOS:')
+        st.markdown('#### DATOS:')
         response = AgGrid(df, editable=True, fit_columns_on_grid_load=True)
         bu = st.form_submit_button('Realizar ajuste y graficar')
     if bu:   
