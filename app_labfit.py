@@ -7,7 +7,8 @@ from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
 
 st.set_page_config(layout="wide")
 st.title("App para el ajuste de datos experimentales")
-st.markdown(" ### Ajuste lineal $ y = ax + b~~~~~~~~~~~~~~~~~~~~~~~~$  Ajuste potencial $ y = a x^b$ ")
+st.markdown(" ### Ajuste lineal $ y = ax + b$")
+st.markdown("Ajuste potencial $ y = a x^b$ ")
 
 def power_law(x, a, b):
     return a*np.power(x, b)
@@ -155,8 +156,5 @@ with open("plot.png", "rb") as file:
         file_name=None,
         mime="image/png"
         )
-    #if btn:  
-    #    os.system("rm *.png") 
-
 
 
