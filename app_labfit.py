@@ -7,8 +7,11 @@ from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
 
 st.set_page_config(layout="wide")
 st.title("App para el ajuste de datos experimentales")
-st.markdown(" ### Ajuste lineal $ y = ax + b$")
-st.markdown("Ajuste potencial $ y = a x^b$ ")
+st.markdown(""" ### Ajustes: 
+
+## lineal $ y = ax + b$
+
+## potencial $ y = a x^b$ """)
 
 def power_law(x, a, b):
     return a*np.power(x, b)
